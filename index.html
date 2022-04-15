@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
+    <script>
+      var judul = 'Hasil Design yang belum ada Texture' + ' ';
+      var speed = 180;
+      var ulangi = null;
+      function gerak() {
+        document.title = judul;
+        judul = judul.substring(1, judul.length) + judul.charAt(0);
+        ulangi = setTimeout('gerak()', speed);
+      }
+      gerak();
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/WebsiteSederhana.css" rel="stylesheet">
+  </head>
+
+  <body>
+   
+    <!-- Jumbotron Awal -->
+    <div class="jumbotron text-center" style="margin-top: -40px;">
+      <p style="font: arial 14px bold; text-align: left;text-indent: 20px; position: fixed; ">Jam Sekarang :  <span id="jam" ></span></p>
+    
+      <img src="img/pp.png" alt="Budi Santoso" class="img-circle">
+      <h1>Budi Santoso</h1>
+      <p> 211510006 | Student | Sistem Informasi </p>
+    </div>
+    <!-- Jumbotron Akhir -->
+
+    <!-- Portfolio Awal -->
+    <section class="Portfolio" id="Portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2 id="gambar">Hasil Design</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6  gmb">
+            <a href="#gambar" class="thumbnail">
+              <img src="img/Portfolio/Meja Kantor.png" alt="star">
+            </a>
+          </div>
+          <div class="col-sm-6  gmb">
+            <a href="#gambar" class="thumbnail">
+              <img src="img/Portfolio/Meja Kursi.png" alt="star">
+            </a>
+          </div>
+          <div class="col-sm-6  gmb">
+            <a href="#gambar" class="thumbnail">
+              <img src="img/Portfolio/Meja TV.png" alt="star">
+            </a>
+          </div>
+          <div class="col-sm-6  gmb">
+            <a href="#gambar" class="thumbnail">
+              <img src="img/Portfolio/Sarkas Samping Kasur.png" alt="star">
+            </a>
+          </div>
+          
+        </div>
+
+        <div class="col-sm-6 gmb">
+          <a href="#gambar" class="thumbnail">
+            <img src="img/Portfolio/Lemari Baju Tutup.png" alt="star">
+          </a>
+        </div>
+        <div class="col-sm-6 gmb">
+          <a href="#gambar" class="thumbnail">
+            <img src="img/Portfolio/Lemari Baju Buka.png" alt="star">
+          </a>
+        </div>
+
+          <!-- <div class="col-sm-4 gmb">
+            <a href="" class="thumbnail">
+              <img src="img/Portfolio/mg2.jpg" alt="star">
+            </a>
+          </div>
+          <div class="col-sm-4 gmb">
+            <a href="" class="thumbnail">
+              <img src="img/Portfolio/mg2.jpg" alt="star">
+            </a>
+          </div>
+          <div class="col-sm-4 gmb">
+            <a href="" class="thumbnail">
+              <img src="img/Portfolio/mg2.jpg" alt="star">
+            </a>
+          </div> -->
+        
+      </div>
+    </section>
+    <!-- Portfolio Akhir -->
+
+    <!-- Kontak Awal -->
+    <!-- <section class="Kontak" id="Kontak">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2>Contact</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <form>
+              <div class="form-group">
+                <label for="Nama">Nama :</label>
+                <input type="text" name="Masukan Nama" id="Nama" class="form-control" placeholder="Masukkan Nama"</input>
+              </div>
+              <div class="form-group">
+                <label for="Email">Email :</label>
+                <input type="email" id="Email" class="form-control" placeholder="Masukkan Email">
+              </div>
+              <div class="form-group">
+                <label for="Telp">No.Telepon :</label>
+                <input type="tel" id="Telp" class="form-control" placeholder="Masukkan No Telepon">
+              </div>
+              <label for="Kategori">Kategori :</label>
+              <select id="Kategori" class="form-control">
+                <option>Pilih Kategori</option>
+                <option>Web Design</option>
+                <option>Web Developer</option>
+                <option>Gamer</option>
+                <option>Designer</option>
+              </select>
+              <div class="form-group">
+                <label for="Pesan">Pesan :</label>
+                <textarea class="form-control" id="Pesan" rows="10" placeholder="Masukkan Pesan"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Kontak Akhir -->
+
+    <!-- Footer Awal -->
+    <footer>
+      <div class="container text-center">
+        <div class="row ">
+          <div class="col-sm-12">
+            <p>&copy; Copyright 2022 | Build by. <a href="https://instagram.com/budisn12"><img src="img/Icon/instagram.png"></img> Budi Santoso</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Akhir -->
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  window.onload = function() { jam(); }
+ 
+  function jam() {
+   var e = document.getElementById('jam'),
+   d = new Date(), h, m, s;
+   h = d.getHours();
+   m = set(d.getMinutes());
+   s = set(d.getSeconds());
+ 
+   e.innerHTML = h +':'+ m +':'+ s;
+ 
+   setTimeout('jam()', 1000);
+  }
+ 
+  function set(e) {
+   e = e < 10 ? '0'+ e : e;
+   return e;
+  }
+ </script>
